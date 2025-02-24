@@ -1,0 +1,115 @@
+/* Import a modern font (Roboto) from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Apply the font globally */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f8; /* a light modern gray background */
+}
+
+/* Container for the ATM image */
+.atm-container {
+  position: relative;
+  width: 1000px;  /* Adjust as needed */
+  height: 1000px;
+  margin: 40px auto;
+  background: url('/public/img.png') no-repeat center center;
+  background-size: 100% 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* The "screen" area overlay */
+.screen-container {
+  position: absolute;
+  top: 187px;    /* distance from top of .atm-container */
+  left: 190px;   /* distance from left of .atm-container */
+  width: 618px;  /* width of the blue screen */
+  height: 380px; /* height of the blue screen */
+  background-color: rgba(135, 206, 235, 0.95);
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Static screen: no scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  position: relative;
+}
+
+/* Fixed message container to reserve space for messages */
+.message-container {
+  height: 30px; /* Fixed height */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modern heading styling inside the screen */
+.screen-container h3 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Modern button styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  margin: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Style for input fields */
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+/* Style inline error messages */
+.inline-error {
+  color: red;
+  font-size: 14px;
+}
+
+/* Logout button positioned at the bottom left of the ATM screen overlay */
+.logout-button {
+  position: absolute;
+  bottom: 460px;
+  left: 220px;
+  padding: 10px 20px;
+  background-color: #dc3545; /* red */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
