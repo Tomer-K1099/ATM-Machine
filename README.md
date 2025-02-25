@@ -22,11 +22,13 @@ First, Clone this repository into your machine:
 
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
+```
 #### Backend prerequisites:
 Setup a virtual environment
 open a new terminal and navigate to /atm-machine/backend and type the following:
 ```bash
 pip install requirements.txt
+```
 this should install the required packages to run the backend server locally.
 
 #### Frontend prerequisites:
