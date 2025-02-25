@@ -24,6 +24,7 @@ Elaboration about running the code locally on your machine is in the bottom of t
 
 Currently the system holds 2 users on the server's memory. 
 Account number 1234 , PIN 1111
+
 Account number 5678 , PIN 2222
 
 ### Approach and Decisions
