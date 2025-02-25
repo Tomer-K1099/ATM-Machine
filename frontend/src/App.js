@@ -15,7 +15,7 @@ function App() {
   const [actionMessage, setActionMessage] = useState('');
   const [actionMessageType, setActionMessageType] = useState(''); // 'success' or 'error'
 
-  const API_BASE_URL = 'http://localhost:5000/api';
+  // const API_BASE_URL = 'http://localhost:5000/api';
 
   // First screen: Account number entry.
   // Now, we call /api/balance to verify the account exists.
@@ -25,7 +25,7 @@ function App() {
       return;
     }
     try {
-      const res = await fetch(`${API_BASE_URL}/balance/${accountNumber}`);
+      const res = await fetch(`api/balance/${accountNumber}`);
       if (res.ok) {
         // Account exists; proceed to the PIN screen.
         setLoginError('');
@@ -47,7 +47,7 @@ function App() {
       return;
     }
     try {
-      const res = await fetch(`${API_BASE_URL}/login`, {
+      const res = await fetch(`api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ accountNumber, pin }),
@@ -79,7 +79,7 @@ function App() {
 
   const fetchBalance = async () => {
     try {
-      const res = await fetch(`${API_BASE_URL}/balance/${accountNumber}`);
+      const res = await fetch(`api/balance/${accountNumber}`);
       if (res.ok) {
         const data = await res.json();
         setBalance(data.balance);
@@ -100,7 +100,7 @@ function App() {
       return;
     }
     try {
-      const res = await fetch(`${API_BASE_URL}/withdraw`, {
+      const res = await fetch(`api/withdraw`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ accountNumber, amount }),
@@ -133,7 +133,7 @@ function App() {
       return;
     }
     try {
-      const res = await fetch(`${API_BASE_URL}/deposit`, {
+      const res = await fetch(`api/deposit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ accountNumber, amount }),
