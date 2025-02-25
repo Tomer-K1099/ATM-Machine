@@ -1,6 +1,7 @@
 
 # ATM-Machine Prototype Mini-Project
-Link to this repo: [https://github.com/Tomer-K1099/ATM-Machine/blob/main/README.md]https://github.com/Tomer-K1099/ATM-Machine/blob/main/README.md
+Link to this repo: [https://github.com/Tomer-K1099/ATM-Machine/blob/main/README.md](https://github.com/Tomer-K1099/ATM-Machine/blob/main/README.md)
+
 This is a simple ATM-Machine prototype mini-project. The user of the ATM may log in with a PIN code, view the account balance, deposit, and withdraw money.
 
 ## Key Features
