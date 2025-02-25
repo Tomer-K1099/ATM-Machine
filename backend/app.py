@@ -4,14 +4,14 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-# Data structure now includes PIN information for each account.
+# Data structure contains PIN and balance information for each account.
 accounts = {
     "1234": {"balance": 1000, "pin": "1111"},
-    "5678": {"balance": 500, "pin": "2222"}
+    "5678": {"balance": 500, "pin": "2222"},
 }
 
 
-# New endpoint for login: verifies account number and PIN.
+# endpoint for login: verifies account number and PIN.
 @app.route('/api/login', methods=['POST'])
 def login():
     data = request.get_json()
@@ -23,10 +23,11 @@ def login():
     if accounts[accountNumber]["pin"] != pin:
         return jsonify({"error": "Invalid PIN"}), 400
 
-    # If successful, return a success message (and possibly a token for further authentication)
+    # If successful, return a success message
     return jsonify({"status": "success", "accountNumber": accountNumber}), 200
 
 
+# endpoint for get_balance
 @app.route('/api/balance/<accountNumber>', methods=['GET'])
 def get_balance(accountNumber):
     if accountNumber not in accounts:
@@ -36,7 +37,7 @@ def get_balance(accountNumber):
         "balance": accounts[accountNumber]["balance"]
     }), 200
 
-
+# endpoint for withdraw
 @app.route('/api/withdraw', methods=['POST'])
 def withdraw():
     data = request.get_json()
@@ -57,7 +58,7 @@ def withdraw():
         "balance": accounts[accountNumber]["balance"]
     }), 200
 
-
+# endpoint for deposit
 @app.route('/api/deposit', methods=['POST'])
 def deposit():
     data = request.get_json()
