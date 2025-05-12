@@ -26,7 +26,7 @@ Account number 5678 , PIN 2222
 ### Approach and Decisions
 
 First, I sketched a loose and simplified class diagram to represent the system components - A server and a client. The server serves the client's needs. for instance if the client wants to check his balance, he approaches the server which holds this information for him. I figured that the client's information will be stored in the server as an account dictionary but the client himself doesn't exist in the system as an instance, rather he needs the interface to perform his tasks. 
-I chose to program the server-side on Flask after conducting a short research about backend frameworks in Python. I was unfamiliar with frontend-development prior to this assignment, therefore I had to research frontend frameworks, and I chose React because of the popularity of the framework. 
+I chose to program the server-side on Flask. I was unfamiliar with frontend-development prior to this assignment, therefore I had to research frontend frameworks, and I chose React because of the popularity of the framework. 
 Most of the decisions I made were frontend-related as it was subject to interpretation. I decided to make a "simulation" like prototype, to enhance the user experience as much as possible in the boundaries of the deadline. In addition, I added a PIN authentication feature, which serves as another layer of realism to the system, and another level of security.
 The server is hosted on AWS EC2.
 When deploying I used tmux for persistent server hosting. I organized the project as a monorepo, and used git and Github for version control. 
@@ -34,8 +34,8 @@ In the future, the ATM might have enhanced frontend mechanisms, including credit
 ### Challenges
 
 This assignment was a huge challenge for me. I have practically never developed frontend applications, Nevermind deploying a server onto a cloud service.
-Thankfully, the author of the assignment permitted the use of documentations, forums, and AI tools. 
-Through determination, self-study, Youtube tutorials, forums, and AI, I have learned a lot about the actual process of developing and engineering a software.
+Thankfully, the author of the assignment permitted the use of documentations and forums 
+Through determination, self-study, Youtube tutorials, forums I have learned a lot about the actual process of developing and engineering a software.
 I am happy to say that I am proud of the final product I achieved within the very limited timeframe.
 
 
